@@ -1,3 +1,50 @@
+@config "../tailwind.config.js";
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Inter", sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+*{
+  font-family: "Inter", sans-serif ;
+  margin: 0;
+  ::-webkit-scrollbar {
+    width: 3px; 
+    border-radius: 15px;
+    display: none;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background-color: aliceblue;
+    border-radius: 15px; /* cor do fundo da barra de rolagem */
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(255, 115, 0); /* cor do manipulador da barra de rolagem */
+  }
+  
+
+}
+
+.font-inter{
+  font-family: "Inter", sans-serif ;
+
+}
+
+
+
+
 
 :root{
   --tw-bg-opacity: 1;
