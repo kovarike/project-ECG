@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- FONTE INTER -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="./dist//main.css" rel="stylesheet" />
+    <link href="./dist/outmain.css" rel="stylesheet" type="text" />
+    <link href="./dist/index.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+  
+
+    <title>ECG</title>
+  </head>
+  <body class="w-full h-full bg-white overflow-y-scroll text-black">
+    <main class="w-full h-full flex flex-col items-center bg-white">
+      <div class="w-full h-full bg-[url('./public/images/main.jpeg')] object-cover bg-center bg-cover">
+        <div class="w-full h-full flex items-center justify-center bg-[rgba(0,0,0,0.3)] p-4">
+          <div class="container mx-auto">
+            <header class="w-full h-14 bg-transparent flex items-center justify-between px-4">
+              <div class="flex items-center">
+                <img
+                  class="w-28 h-14"
+                  src="./public/images/logo.jpeg"
+                  alt="Logo ECG"
+                />
+              </div>
+  
+              <div class="lg:max-w-[500px] lg:w-[500px] md:w-[400px] sm:w-[300px] h-full flex items-center justify-between bg-[rgba(0,0,0,0.3)]">
+                  <div id="list" class="flex w-32 h-14 max-w-14 items-center justify-center p-[4rem]" >
+                    <div id="select-list" class=" relative w-32 h-14">
+                      <input type="checkbox" id="check" >
+                      <div id="select-button" class="mt-[0.5rem]  flex p-[0.75rem] items-center justify-between rounded-md  bg-transparent  text-white w-full">
+                        <div id="select-value" class="  text-2xl transition duration-500 ease-in-out ">Serviços</div>
+                      
+    
+                        <div id="chevrons">
+                          <i data-lucide="chevron-down" class=""></i>
+                          <i data-lucide="chevron-up" class=""></i>
+                        </div>
+                      </div>
+                    </div>
+                    <ul id="options" class="space-y-2 absolute -mb-80 -mr-6">
+                      <a class="option group" href="#construções">
+                        <li >
+                          <span class="group-hover:text-orange-500 text-center text-lg font-inter font-medium text-white">Construções</span>
+                        </li>
+                      </a>
+                      <a class="option group" href="#planejamento">
+                        <li >
+                          <span class="group-hover:text-orange-500 text-center text-lg font-inter font-medium text-white">Planejamento</span>
+                        </li>
+                      </a>
+                      <a class="option group" href="#reformas">
+                        <li>
+                          <span class="group-hover:text-orange-500 text-center text-lg font-inter font-medium text-white">Reformas</span>
+                        </li>
+                      </a>
+                      <a class="option group" href="#looping">
+                        <li>
+                          <span class="group-hover:text-orange-500 text-center text-lg font-inter font-medium text-white">Mais</span>
+                        </li>
+                      </a>
+
+                    </ul>
+
+                  </div>
+                <button class=" text-white text-2xl w-28 h-14 p-2 cursor-pointer border-transparent rounded-md transition duration-500 ease-in-out border-none hover:text-orange-600" id="contact1">Contato</button>
+              </div>
+            </header>
+  
+            <div class="w-full h-full flex justify-center mb-28 mt-40 ">
+              <div class="w-full h-full flex flex-col space-y-5">
+                <div class="mb-10">
+  
+                  <h1 class=" h-16 text-shadow-2xl bg-transparent  text-6xl font-inter font-bold  text-white mb-2">
+                    ECG
+                  </h1>
+  
+                  <h1 class="h-16 text-shadow-2xl bg-transparent  text-6xl font-inter font-bold  text-white mb-2">
+                    CONSTRUÇÕES E REFORMAS
+                  </h1>
+  
+                  <div class="bg-orange-800 h-1 w-24 rounded-full mb-4 "></div>
+                  <!-- [#883422] -->
+  
+                  <p class="mt-20 w-3/4 font-sans text-white text-2xl font-semibold  mb-12">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit
+                    porro a quo iusto, placeat accusamus nesciunt similique
+                    exercitationem corrupti. Est dolore quaerat sapiente maiores
+                    delectus tempore accusamus obcaecati modi ratione?
+                  </p>
+                </div>
+                <div class="w-[250px] flex items-center justify-center">
+                  <!-- <button class="w-52 h-12 shadow-2xl transition duration-500 ease-in-out  font-inter font-normal border-[0.1rem] border-orange-800 text-2xl p-2 text-white bg-orange-800 rounded-[5px] text-center">
+                    Nossos Serviços
+                  </button> -->
+  
+                  <button id="contact2" class="w-52 h-12 shadow-2xl bg-[rgba(0,0,0,0.2)] transition duration-500 ease-in-out  font-inter p-2 text-center font-normal text-white hover:border-white border-[0.1rem] rounded-[5px] border-orange-600 text-2xl">
+                    Contato
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+
+      <div class=" w-full p-6 flex flex-col items-center border-t-8 border-orange-800">
+           <div class = " -mt-14 container mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-3 ">
+            
+            <div id="construções" class="space-y-4 flex flex-col items-center bg-white rounded-md p-6">
+                <img class=" w-full h-56  object-cover bg-center bg-cover mb-4" src="./public/post/p3.jpg" alt="teste">
+                <div class="mr-auto">
+                  <h2 class="text-orange-800 font-inter font-semibold text-3xl mb-2">
+                    Construções
+                  </h2>
+                  <div class="bg-orange-800 h-1 w-24 mb-4 rounded-full "></div>
+                </div>
+                    
+                <p class="text-gray-500 font-inter font-normal text-xl text-center">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ullam corrupti, aliquam unde nostrum assumenda enim iste sed animi? Non labore harum laboriosam quisquam quae, reprehenderit minima dolorum id fugit?
+                </p> 
+              </div>
+              <div id="planejamento" class="space-y-4 flex flex-col items-center bg-white rounded-md p-6">
+                <img class=" w-full h-56  object-cover bg-center bg-cover mb-4" src="./public/post/p4.jpg" alt="teste">
+                <div class="mr-auto">
+                  <h2 class="text-orange-800 font-inter font-semibold text-3xl mb-2">
+                    Planejamento
+                  </h2>
+                  <div class="bg-orange-800 h-1 w-24 mb-4 rounded-full"></div>
+                </div>
+                    
+                <p class="text-gray-500 font-inter font-normal text-xl text-center">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ullam corrupti, aliquam unde nostrum assumenda enim iste sed animi? Non labore harum laboriosam quisquam quae, reprehenderit minima dolorum id fugit?
+                  </p> 
+              </div>
+          
+              <div id="reformas" class="space-y-4 flex flex-col items-center bg-white rounded-md p-6 ">
+                <img class=" w-full h-56  object-cover bg-center bg-cover mb-4" src="./public/post/p2.jpg" alt="Reformas">
+                <div class="mr-auto">
+                  <h2 class="text-orange-800 font-inter font-semibold text-3xl mb-2">
+                    Reformas
+                  </h2>
+                  <div class="bg-orange-800 h-1 w-24 mb-4 rounded-full"></div>
+                </div>
+                    
+                <p class="text-gray-500 font-inter font-normal text-xl text-center">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ullam corrupti, aliquam unde nostrum assumenda enim iste sed animi? Non labore harum laboriosam quisquam quae, reprehenderit minima dolorum id fugit?
+                  </p> 
+              </div>
+          </div>
+
+          <div id="looping" class="w-full p-6 flex items-center bg-orange-800 overflow-hidden">
+            <div id="loop-img" class="w-full p-6 flex items-center text-transparent space-x-5 overflow-x-scroll bg-white rounded-md">
+            </div>
+          </div>
+        
+ 
+      </div>
+
+
+      <div id="modal" class=" invisible bg-[rgba(0,0,0,0.7)] z-10 transition duration-500 ease-in-out fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center">
+        <div class="bg-white p-5 relative z-[1] rounded-md text-black w-full max-w-[500px] h-full max-h-[500px] flex flex-col items-center space-y-10">
+          <div class="w-full h-14 flex justify-between items-center">
+            <div class="w-full h-full flex items-center justify-center"><h1 class="text-orange-800 font-inter font-medium text-4xl">Contatos</h1></div>
+            <button class="text-sm hover:text-white w-10 h-10 p-2 cursor-pointer border-[0.1rem] border-red-500 hover:bg-red-700 rounded-full " id="close" data-lucide="x"></button>
+          </div>
+          <a id="whatsapp" target="_blank" class="w-full h-24 flex items-center justify-between hover:bg-green-400 rounded-md group hover:border-transparent transition duration-500 ease-in-out border-green-400 border-[0.1rem] "><img class="object-cover bg-center bg-cover w-20 h-20 ml-4" src="./public//images/whatsapp.png" alt="Whatsapp"/><div class="w-full h-full flex items-center justify-center"><div class="text-3xl text-green-400 font-inter group-hover:text-white ">Whatsapp</div></div></a>
+
+          <a id="instagram" target="_blank" class="w-full h-24 flex items-center justify-between bg-gradient-to-r hover:from-purple-700 hover:to-orange-500 group border-custom-border border-[0.1rem] rounded-md"><img class="object-cover bg-center bg-cover w-20 h-20 ml-4" src="./public//images/instagram.png" alt="Instagram"/>
+            <div class="w-full h-full flex items-center justify-center">
+              <div class="text-3xl text-transparent bg-gradient-to-r from-purple-700 to-orange-500 bg-clip-text hover:bg-clip-text hover:text-gray-900 font-inter group-hover:text-white ">Instagram</div>
+            </div>
+          </a>
+          <div id="email" class="w-full h-24 flex items-center justify-between bg-gradient-to-r hover:from-zinc-600 hover:to-gray-600 group border-custom-border border-[0.1rem] rounded-md"><i class="object-cover bg-center bg-cover w-20 h-20 ml-4" data-lucide="mail"></i>
+            <div id="email-text" class="w-full h-full flex items-center justify-center">
+              <div class="text-3xl text-transparent bg-gradient-to-r from-zinc-600 to-gray-600 bg-clip-text hover:bg-clip-text hover:text-gray-900 font-inter group-hover:text-white ">E-mail</div>
+            </div>
+          </div>
+
+          
+        </div>
+      </div>
+  
+      <footer id="footer" class="w-full h-16 bg-zinc-600 text-lg text-white font-inter font-light text-center mt-6 flex items-center justify-center"></footer>
+    </main>
+
+    <script>
+      lucide.createIcons()
+
+    </script>
+    <script type="module" src="./js/page.js"></script>
+  </body>
+  
+</html>
+
+
+
+
+
+
+
+

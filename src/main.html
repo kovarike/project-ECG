@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="./dist//main.css" rel="stylesheet" />
+  <link href="./dist/outmain.css" rel="stylesheet" type="text" />
+  <link href="./dist/index.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <title>Document</title>
+</head>
+
+<body class="w-full h-full bg-white overflow-y-scroll text-black"> <!-- Ajustado overflow-y-scroll para evitar texto branco -->
+
+  <main class="w-full h-full flex flex-col items-center bg-white">
+    <div class="w-full h-screen bg-cover bg-center" style="background-image: url('./public/images/main.jpg');">
+      <!-- Usando estilo inline para definir o background-image -->
+      <div class="w-full h-full flex items-center justify-center bg-[rgba(0,0,0,0.3)] p-4">
+        <div class="container mx-auto"> <!-- Adicionando container para centralizar e limitar largura -->
+          <header class="w-full h-14 bg-transparent flex items-center justify-between px-4">
+            <div class="flex items-center">
+              <img class="w-14 h-14" src="./public/images/logo.jpeg" alt="Logo ECG">
+            </div>
+
+            <div class="flex items-center space-x-5">
+              <div id="list" class="relative">
+                <input type="checkbox" id="check" class="hidden">
+                <label for="check" class="flex items-center cursor-pointer">
+                  <div class="text-2xl transition duration-500 ease-in-out">Serviços</div>
+                  <div id="chevrons">
+                    <i data-lucide="chevron-down"></i>
+                    <i data-lucide="chevron-up" class="hidden"></i>
+                  </div>
+                </label>
+                <ul id="options" class="absolute top-full mt-2 hidden space-y-2">
+                  <li class="option">
+                    <a href="#construções" class="group">
+                      <span class="group-hover:text-orange-500 text-center text-lg font-inter font-medium text-white">Construções</span>
+                    </a>
+                  </li>
+                  <li class="option">
+                    <a href="#planejamento" class="group">
+                      <span class="group-hover:text-orange-500 text-center text-lg font-inter font-medium text-white">Planejamento</span>
+                    </a>
+                  </li>
+                  <li class="option">
+                    <a href="#reformas" class="group">
+                      <span class="group-hover:text-orange-500 text-center text-lg font-inter font-medium text-white">Reformas</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <button class="text-white text-2xl p-2 border-transparent rounded-md transition duration-500 ease-in-out border-none hover:text-orange-800" id="contact1">Contato</button>
+            </div>
+          </header>
+
+          <div class="flex flex-col items-center justify-center mt-40 mb-28">
+            <h1 class="text-6xl font-inter font-bold text-center text-white mb-10">
+              ECG
+            </h1>
+            <h1 class="text-6xl font-inter font-bold text-center text-white mb-10">
+              CONSTRUÇÕES E REFORMAS
+            </h1>
+            <div class="bg-orange-800 w-64 h-1 mb-4 mt-4 rounded-full"></div>
+            <p class="w-3/4 font-sans text-white text-xl font-extralight text-center mb-20">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit porro a quo iusto, placeat accusamus nesciunt similique exercitationem corrupti. Est dolore quaerat sapiente maiores delectus tempore accusamus obcaecati modi ratione?
+            </p>
+            <div class="flex items-center justify-between w-96">
+              <button class="w-52 h-12 shadow-md transition duration-500 ease-in-out font-inter font-normal text-2xl text-white bg-orange-800 rounded-md border-2 border-transparent text-center">
+                Nossos Serviços
+              </button>
+              <button id="contact2" class="w-52 h-12 shadow-md transition duration-500 ease-in-out font-inter p-2 text-center font-normal text-white bg-transparent hover:text-orange-800 border-2 rounded-md border-white text-2xl">
+                Contato
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-full p-6 flex flex-col items-center border-t-8 border-orange-800">
+      <div class="container mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div id="construções" class="flex flex-col items-center bg-white rounded-md p-6">
+          <img class="w-full h-56 object-cover mb-4" src="./public/images/construcoes.jpg" alt="Construções">
+          <h2 class="text-orange-800 font-inter font-semibold text-3xl mb-2">
+            Construções
+          </h2>
+          <div class="bg-orange-800 h-1 w-24 mb-4 rounded-full"></div>
+          <p class="text-gray-500 font-inter font-normal text-xl text-center">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ullam corrupti, aliquam unde nostrum assumenda enim iste sed animi? Non labore harum laboriosam quisquam quae, reprehenderit minima dolorum id fugit?
+          </p>
+        </div>
+
+        <div id="planejamento" class="flex flex-col items-center bg-white rounded-md p-6">
+          <img class="w-full h-56 object-cover mb-4" src="./public/images/planejamento.jpg" alt="Planejamento">
+          <h2 class="text-orange-800 font-inter font-semibold text-3xl mb-2">
+            Planejamento
+          </h2>
+          <div class="bg-orange-800 h-1 w-24 mb-4 rounded-full"></div>
+          <p class="text-gray-500 font-inter font-normal text-xl text-center">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ullam corrupti, aliquam unde nostrum assumenda enim iste sed animi? Non labore harum laboriosam quisquam quae, reprehenderit minima dolorum id fugit?
+          </p>
+        </div>
+
+        <div id="reformas" class="flex flex-col items-center bg-white rounded-md p-6">
+          <img class="w-full h-56 object-cover mb-4" src="./public/images/reformas.jpg" alt="Reformas">
+          <h2 class="text-orange-800 font-inter font-semibold text-3xl mb-2">
+            Reformas
+          </h2>
+          <div class="bg-orange-800 h-1 w-24 mb-4 rounded-full"></div>
+          <p class="text-gray-500 font-inter font-normal text-xl text-center">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ullam corrupti, aliquam unde nostrum assumenda enim iste sed animi? Non labore harum laboriosam quisquam quae, reprehenderit minima dolorum id fugit?
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center hidden">
+      <!-- Modal content -->
+    </div>
+
+    <footer id="footer" class="w-full h-16 bg-zinc-600 text-lg text-white font-inter font-light text-center mt-6 flex items-center justify-center"></footer>
+  </main>
+
+  <script>
+    lucide.createIcons();
+  </script>
+  <script type="module" src="./js//page.js"></script>
+</body>
+</html>
