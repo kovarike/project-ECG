@@ -2,9 +2,6 @@
 
 // console.log(uuidv4())
 
-const setDate = new Date();
-const date = setDate.getFullYear();
-const footerText = `Copyright © ${date} ECG Construções e Reformas`;
 
 const  modal = document.getElementById("modal");
 const  email = document.getElementById("email-text");
@@ -14,29 +11,104 @@ const  loopImg = document.getElementById("loop-img");
 const  footer = document.getElementById("footer");
 
 
-const scrollSpeed = 20; 
+// const img = [
+//   `<img class=" w-full h-56  object-cover bg-center bg-cover mb-4" src="./public/post/p2.jpg" alt="Reformas">`,
+//   `<img class=" w-full h-56  object-cover bg-center bg-cover mb-4" src="./public/post/p1.jpg" alt="Reformas">`,
+//   `<img class=" w-full h-56  object-cover bg-center bg-cover mb-4" src="./public/post/p4.jpg" alt="Reformas">`,
+//   `<img class=" w-full h-56  object-cover bg-center bg-cover mb-4" src="./public/post/p3.jpg" alt="Reformas">`,
+//   `<img class=" w-full h-56  object-cover bg-center bg-cover mb-4" src="./public/post/p4.jpg" alt="Reformas">`,
+//   `<img class=" w-full h-56  object-cover bg-center bg-cover mb-4" src="./public/post/p1.jpg" alt="Reformas">`,
+//   `<img class=" w-full h-56  object-cover bg-center bg-cover mb-4" src="./public/post/p2.jpg" alt="Reformas">`,
+//   `<img class=" w-full h-56  object-cover bg-center bg-cover mb-4" src="./public/post/p4.jpg" alt="Reformas">`,
+//   `<img class=" w-full h-56  object-cover bg-center bg-cover mb-4" src="./public/post/p1.jpg" alt="Reformas">`,
+//   `<img class=" w-full h-56  object-cover bg-center bg-cover mb-4" src="./public/post/p4.jpg" alt="Reformas">`,
+//   `<img class=" w-full h-56  object-cover bg-center bg-cover mb-4" src="./public/post/p1.jpg" alt="Reformas">`,
+//   `<img class=" w-full h-56  object-cover bg-center bg-cover mb-4" src="./public/post/p4.jpg" alt="Reformas">`,
+//   `<img class=" w-full h-56  object-cover bg-center bg-cover mb-4" src="./public/post/p1.jpg" alt="Reformas">`,
+  
+
+
+ 
+// ] 
+
+
+
+// const scrollSpeed = 20; 
+// const interval = 100;
+// loopImg.innerHTML = img;
+// function autoScroll() {
+//   let newScroll = loopImg.scrollLeft ;
+//   if (newScroll >= loopImg.scrollWidth - loopImg.clientWidth) {
+//     loopImg.scrollTo({
+//       left: -100 * -100 * -100,
+//       behavior: 'auto'
+//     });
+//   }else{
+//     loopImg.scrollTo({
+//       left: loopImg.scrollLeft + scrollSpeed,  
+//       behavior: 'smooth'
+//     });
+//   }
+// }
+
+// setInterval(autoScroll, interval);
+
+
+
+
+
+const images = [
+  './public/post/p2.jpg',
+  './public/post/p1.jpg',
+  './public/post/p3.jpg',
+  './public/post/p4.jpg',
+  './public/post/p2.jpg',
+  './public/post/p4.jpg',
+  './public/post/p3.jpg',
+  './public/post/p3.jpg',
+  './public/post/p4.jpg',
+  './public/post/p2.jpg',
+  './public/post/p4.jpg',
+  './public/post/p3.jpg',
+
+,
+];
+
+
+let currentIndex = 0;
+images.forEach(imageSrc => {
+  const imgElement = document.createElement('img');
+  imgElement.className = 'w-full h-56 object-cover bg-center bg-cover mb-4';
+  imgElement.src = imageSrc;
+  imgElement.alt = 'Reformas';
+  loopImg.appendChild(imgElement);
+});
+
+const scrollSpeed = 5;
 const interval = 100;
 function autoScroll() {
-  loopImg.innerHTML  = img;
+  let newScroll = loopImg.scrollLeft + scrollSpeed;
   
-  let newScroll = loopImg.scrollLeft;
   if (newScroll >= loopImg.scrollWidth - loopImg.clientWidth) {
     loopImg.scrollTo({
-      left: -100,
+      left: 0,
       behavior: 'auto'
     });
+    currentIndex = 0;
   } else {
     loopImg.scrollTo({
-      left: loopImg.scrollLeft + scrollSpeed,
+      left: newScroll,
       behavior: 'smooth'
     });
+  }
+  
+  currentIndex++;
+  if (currentIndex >= images.length) {
+    currentIndex = 0;
   }
 }
 
 setInterval(autoScroll, interval);
-
-footer.innerText = footerText;
-
 
 
 function Contact() {
@@ -62,26 +134,8 @@ document.getElementById("email").addEventListener("click", () => {
 
 document.getElementById("close").addEventListener("click", () => Close());
 
+const setDate = new Date();
+const date = setDate.getFullYear();
+const footerText = `Copyright © ${date} ECG Construções e Reformas`;
 
-
-const img = [
-  `<img class=" w-full h-56  object-cover bg-center bg-cover mb-4" src="./public/post/p2.jpg" alt="Reformas">`,
-  `<img class=" w-full h-56  object-cover bg-center bg-cover mb-4" src="./public/post/p1.jpg" alt="Reformas">`,
-  `<img class=" w-full h-56  object-cover bg-center bg-cover mb-4" src="./public/post/p4.jpg" alt="Reformas">`,
-  `<img class=" w-full h-56  object-cover bg-center bg-cover mb-4" src="./public/post/p3.jpg" alt="Reformas">`,
-  `<img class=" w-full h-56  object-cover bg-center bg-cover mb-4" src="./public/post/p4.jpg" alt="Reformas">`,
-  `<img class=" w-full h-56  object-cover bg-center bg-cover mb-4" src="./public/post/p1.jpg" alt="Reformas">`,
-  `<img class=" w-full h-56  object-cover bg-center bg-cover mb-4" src="./public/post/p2.jpg" alt="Reformas">`,
-  `<img class=" w-full h-56  object-cover bg-center bg-cover mb-4" src="./public/post/p1.jpg" alt="Reformas">`,
-  `<img class=" w-full h-56  object-cover bg-center bg-cover mb-4" src="./public/post/p4.jpg" alt="Reformas">`,
-  `<img class=" w-full h-56  object-cover bg-center bg-cover mb-4" src="./public/post/p3.jpg" alt="Reformas">`,
-  `<img class=" w-full h-56  object-cover bg-center bg-cover mb-4" src="./public/post/p4.jpg" alt="Reformas">`,
-  `<img class=" w-full h-56  object-cover bg-center bg-cover mb-4" src="./public/post/p1.jpg" alt="Reformas">`,
-  `<img class=" w-full h-56  object-cover bg-center bg-cover mb-4" src="./public/post/p2.jpg" alt="Reformas">`,
-  `<img class=" w-full h-56  object-cover bg-center bg-cover mb-4" src="./public/post/p1.jpg" alt="Reformas">`,
-  `<img class=" w-full h-56  object-cover bg-center bg-cover mb-4" src="./public/post/p4.jpg" alt="Reformas">`,
-  `<img class=" w-full h-56  object-cover bg-center bg-cover mb-4" src="./public/post/p3.jpg" alt="Reformas">`,
-  `<img class=" w-full h-56  object-cover bg-center bg-cover mb-4" src="./public/post/p4.jpg" alt="Reformas">`,
-  `<img class=" w-full h-56  object-cover bg-center bg-cover mb-4" src="./public/post/p1.jpg" alt="Reformas">`,
-]
-
+footer.innerText = footerText;
