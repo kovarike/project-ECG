@@ -90,3 +90,9 @@ display: none;
   
   display: block; 
 }
+
+@media (max-width: 450px) {
+  #list{
+    display: none;
+  }
+}
